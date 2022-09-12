@@ -364,7 +364,7 @@ namespace Deklaracja
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton3.Location = new System.Drawing.Point(67, 554);
+            this.radioButton3.Location = new System.Drawing.Point(44, 554);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(112, 17);
             this.radioButton3.TabIndex = 10;
@@ -376,7 +376,7 @@ namespace Deklaracja
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton4.Location = new System.Drawing.Point(194, 554);
+            this.radioButton4.Location = new System.Drawing.Point(170, 555);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(162, 17);
             this.radioButton4.TabIndex = 11;
