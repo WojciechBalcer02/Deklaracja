@@ -64,7 +64,7 @@ namespace Deklaracja
             this.second = new System.Windows.Forms.RadioButton();
             this.written = new System.Windows.Forms.CheckBox();
             this.practice = new System.Windows.Forms.CheckBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.viewtext = new System.Windows.Forms.RichTextBox();
             this.confirm = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
@@ -411,13 +411,13 @@ namespace Deklaracja
             this.practice.Text = "praktycznej";
             this.practice.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // viewtext
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(618, 24);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(407, 548);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
+            this.viewtext.Location = new System.Drawing.Point(618, 24);
+            this.viewtext.Name = "viewtext";
+            this.viewtext.Size = new System.Drawing.Size(407, 548);
+            this.viewtext.TabIndex = 14;
+            this.viewtext.Text = "";
             // 
             // confirm
             // 
@@ -476,7 +476,7 @@ namespace Deklaracja
             this.Controls.Add(this.save);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.confirm);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.viewtext);
             this.Controls.Add(this.practice);
             this.Controls.Add(this.written);
             this.Controls.Add(this.label13);
@@ -490,6 +490,7 @@ namespace Deklaracja
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Deklaracja";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -539,7 +540,7 @@ namespace Deklaracja
         private System.Windows.Forms.RadioButton second;
         private System.Windows.Forms.CheckBox written;
         private System.Windows.Forms.CheckBox practice;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox viewtext;
         private System.Windows.Forms.Button confirm;
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button save;
