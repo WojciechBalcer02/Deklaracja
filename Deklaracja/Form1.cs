@@ -24,12 +24,21 @@ namespace Deklaracja
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            qualifications.Items.Clear();
+            qualifications.Items.Add("INF.02");
+            qualifications.Items.Add("INF.03");
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void programmer_CheckedChanged(object sender, EventArgs e)
+        {
+            qualifications.Items.Clear();
+            qualifications.Items.Add("INF.03");
+            qualifications.Items.Add("INF.04");
         }
     }
 }

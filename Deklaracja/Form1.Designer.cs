@@ -59,7 +59,7 @@ namespace Deklaracja
             this.computerspecialist = new System.Windows.Forms.RadioButton();
             this.programmer = new System.Windows.Forms.RadioButton();
             this.qualifications = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.changetext = new System.Windows.Forms.Label();
             this.first = new System.Windows.Forms.RadioButton();
             this.second = new System.Windows.Forms.RadioButton();
             this.written = new System.Windows.Forms.CheckBox();
@@ -337,13 +337,14 @@ namespace Deklaracja
             // programmer
             // 
             this.programmer.AutoSize = true;
-            this.programmer.Location = new System.Drawing.Point(248, 19);
+            this.programmer.Location = new System.Drawing.Point(247, 19);
             this.programmer.Name = "programmer";
             this.programmer.Size = new System.Drawing.Size(117, 17);
             this.programmer.TabIndex = 7;
             this.programmer.TabStop = true;
             this.programmer.Text = "technik programista";
             this.programmer.UseVisualStyleBackColor = true;
+            this.programmer.CheckedChanged += new System.EventHandler(this.programmer_CheckedChanged);
             // 
             // qualifications
             // 
@@ -356,14 +357,14 @@ namespace Deklaracja
             this.qualifications.Size = new System.Drawing.Size(91, 21);
             this.qualifications.TabIndex = 8;
             // 
-            // label13
+            // changetext
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label13.Location = new System.Drawing.Point(152, 517);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 13);
-            this.label13.TabIndex = 9;
+            this.changetext.AutoSize = true;
+            this.changetext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.changetext.Location = new System.Drawing.Point(152, 517);
+            this.changetext.Name = "changetext";
+            this.changetext.Size = new System.Drawing.Size(0, 13);
+            this.changetext.TabIndex = 9;
             // 
             // first
             // 
@@ -479,7 +480,7 @@ namespace Deklaracja
             this.Controls.Add(this.viewtext);
             this.Controls.Add(this.practice);
             this.Controls.Add(this.written);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.changetext);
             this.Controls.Add(this.qualifications);
             this.Controls.Add(this.listofterms);
             this.Controls.Add(this.label12);
@@ -535,7 +536,7 @@ namespace Deklaracja
         private System.Windows.Forms.RadioButton computerspecialist;
         private System.Windows.Forms.RadioButton programmer;
         private System.Windows.Forms.ComboBox qualifications;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label changetext;
         private System.Windows.Forms.RadioButton first;
         private System.Windows.Forms.RadioButton second;
         private System.Windows.Forms.CheckBox written;
