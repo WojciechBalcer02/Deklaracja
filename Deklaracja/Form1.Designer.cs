@@ -32,44 +32,48 @@ namespace Deklaracja
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pesel = new System.Windows.Forms.TextBox();
+            this.placeofbrith = new System.Windows.Forms.TextBox();
+            this.dateofbirth = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
+            this.lastname = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.email = new System.Windows.Forms.TextBox();
+            this.phonenumber = new System.Windows.Forms.TextBox();
+            this.postoffice = new System.Windows.Forms.TextBox();
+            this.code = new System.Windows.Forms.TextBox();
+            this.address = new System.Windows.Forms.TextBox();
+            this.town = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.listofterms = new System.Windows.Forms.ComboBox();
+            this.computerspecialist = new System.Windows.Forms.RadioButton();
+            this.programmer = new System.Windows.Forms.RadioButton();
+            this.qualifications = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.first = new System.Windows.Forms.RadioButton();
+            this.second = new System.Windows.Forms.RadioButton();
+            this.written = new System.Windows.Forms.CheckBox();
+            this.practice = new System.Windows.Forms.CheckBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.confirm = new System.Windows.Forms.Button();
+            this.clear = new System.Windows.Forms.Button();
+            this.save = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -78,17 +82,17 @@ namespace Deklaracja
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(102, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 16);
+            this.label1.Size = new System.Drawing.Size(335, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "DEKLARACJA PRZYSTĄPIENIA DO EGZAMINU";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.pesel);
+            this.groupBox1.Controls.Add(this.placeofbrith);
+            this.groupBox1.Controls.Add(this.dateofbirth);
+            this.groupBox1.Controls.Add(this.name);
+            this.groupBox1.Controls.Add(this.lastname);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -102,14 +106,88 @@ namespace Deklaracja
             this.groupBox1.Text = "Dane osobowe ucznia";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // pesel
+            // 
+            this.pesel.Location = new System.Drawing.Point(187, 101);
+            this.pesel.Name = "pesel";
+            this.pesel.Size = new System.Drawing.Size(101, 20);
+            this.pesel.TabIndex = 8;
+            // 
+            // placeofbrith
+            // 
+            this.placeofbrith.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.placeofbrith.Location = new System.Drawing.Point(297, 74);
+            this.placeofbrith.Name = "placeofbrith";
+            this.placeofbrith.Size = new System.Drawing.Size(194, 20);
+            this.placeofbrith.TabIndex = 7;
+            // 
+            // dateofbirth
+            // 
+            this.dateofbirth.Location = new System.Drawing.Point(187, 75);
+            this.dateofbirth.Name = "dateofbirth";
+            this.dateofbirth.Size = new System.Drawing.Size(88, 20);
+            this.dateofbirth.TabIndex = 6;
+            // 
+            // name
+            // 
+            this.name.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.name.Location = new System.Drawing.Point(186, 46);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(305, 20);
+            this.name.TabIndex = 5;
+            // 
+            // lastname
+            // 
+            this.lastname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.lastname.Location = new System.Drawing.Point(186, 19);
+            this.lastname.Name = "lastname";
+            this.lastname.Size = new System.Drawing.Size(305, 20);
+            this.lastname.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Numer PESEL:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Data i miejsce urodzenia:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Imię (imiona):";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nazwisko:";
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.email);
+            this.groupBox2.Controls.Add(this.phonenumber);
+            this.groupBox2.Controls.Add(this.postoffice);
+            this.groupBox2.Controls.Add(this.code);
+            this.groupBox2.Controls.Add(this.address);
+            this.groupBox2.Controls.Add(this.town);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
@@ -123,68 +201,59 @@ namespace Deklaracja
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Adres korespondencyjny";
             // 
-            // label2
+            // email
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nazwisko:";
+            this.email.Location = new System.Drawing.Point(358, 106);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(134, 20);
+            this.email.TabIndex = 12;
             // 
-            // label3
+            // phonenumber
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Imię (imiona):";
+            this.phonenumber.Location = new System.Drawing.Point(187, 106);
+            this.phonenumber.Name = "phonenumber";
+            this.phonenumber.Size = new System.Drawing.Size(126, 20);
+            this.phonenumber.TabIndex = 11;
             // 
-            // label4
+            // postoffice
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Data i miejsce urodzenia:";
+            this.postoffice.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.postoffice.Location = new System.Drawing.Point(272, 76);
+            this.postoffice.Name = "postoffice";
+            this.postoffice.Size = new System.Drawing.Size(219, 20);
+            this.postoffice.TabIndex = 10;
             // 
-            // label5
+            // code
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 100);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Numer PESEL:";
+            this.code.Location = new System.Drawing.Point(187, 77);
+            this.code.Name = "code";
+            this.code.Size = new System.Drawing.Size(60, 20);
+            this.code.TabIndex = 9;
             // 
-            // label6
+            // address
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 31);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "miejscowość:";
+            this.address.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.address.Location = new System.Drawing.Point(186, 50);
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(305, 20);
+            this.address.TabIndex = 8;
             // 
-            // label7
+            // town
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 56);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "ulica i numer domu:";
+            this.town.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.town.Location = new System.Drawing.Point(186, 25);
+            this.town.Name = "town";
+            this.town.Size = new System.Drawing.Size(305, 20);
+            this.town.TabIndex = 7;
             // 
-            // label8
+            // label10
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 81);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "kod pocztowy i poczta:";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(318, 107);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "mail:";
             // 
             // label9
             // 
@@ -195,14 +264,32 @@ namespace Deklaracja
             this.label9.TabIndex = 5;
             this.label9.Text = "nr telefonu z kierunkowym:";
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(318, 107);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "mail:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(26, 81);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(138, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "kod pocztowy i poczta:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(26, 56);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "ulica i numer domu:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(26, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "miejscowość:";
             // 
             // label11
             // 
@@ -224,132 +311,50 @@ namespace Deklaracja
             this.label12.TabIndex = 4;
             this.label12.Text = "przeprowadzanego w terminie";
             // 
-            // textBox1
+            // listofterms
             // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Location = new System.Drawing.Point(186, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Location = new System.Drawing.Point(186, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(187, 75);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(88, 20);
-            this.textBox3.TabIndex = 6;
-            // 
-            // textBox4
-            // 
-            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox4.Location = new System.Drawing.Point(297, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(194, 20);
-            this.textBox4.TabIndex = 7;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(187, 101);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(101, 20);
-            this.textBox5.TabIndex = 8;
-            // 
-            // textBox6
-            // 
-            this.textBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox6.Location = new System.Drawing.Point(186, 25);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(305, 20);
-            this.textBox6.TabIndex = 7;
-            // 
-            // textBox7
-            // 
-            this.textBox7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox7.Location = new System.Drawing.Point(186, 50);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(305, 20);
-            this.textBox7.TabIndex = 8;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(187, 77);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(60, 20);
-            this.textBox8.TabIndex = 9;
-            // 
-            // textBox9
-            // 
-            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox9.Location = new System.Drawing.Point(272, 76);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(219, 20);
-            this.textBox9.TabIndex = 10;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(187, 106);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(126, 20);
-            this.textBox10.TabIndex = 11;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(358, 106);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(134, 20);
-            this.textBox11.TabIndex = 12;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.listofterms.FormattingEnabled = true;
+            this.listofterms.Items.AddRange(new object[] {
             "styczeń",
             "czerwiec"});
-            this.comboBox1.Location = new System.Drawing.Point(306, 432);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
+            this.listofterms.Location = new System.Drawing.Point(306, 432);
+            this.listofterms.Name = "listofterms";
+            this.listofterms.Size = new System.Drawing.Size(121, 21);
+            this.listofterms.TabIndex = 5;
             // 
-            // radioButton1
+            // computerspecialist
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(119, 473);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(111, 17);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "technik informatyk";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.computerspecialist.AutoSize = true;
+            this.computerspecialist.Location = new System.Drawing.Point(61, 19);
+            this.computerspecialist.Name = "computerspecialist";
+            this.computerspecialist.Size = new System.Drawing.Size(111, 17);
+            this.computerspecialist.TabIndex = 6;
+            this.computerspecialist.TabStop = true;
+            this.computerspecialist.Text = "technik informatyk";
+            this.computerspecialist.UseVisualStyleBackColor = true;
+            this.computerspecialist.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // programmer
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(365, 473);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(117, 17);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "technik programista";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.programmer.AutoSize = true;
+            this.programmer.Location = new System.Drawing.Point(248, 19);
+            this.programmer.Name = "programmer";
+            this.programmer.Size = new System.Drawing.Size(117, 17);
+            this.programmer.TabIndex = 7;
+            this.programmer.TabStop = true;
+            this.programmer.Text = "technik programista";
+            this.programmer.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // qualifications
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.qualifications.FormattingEnabled = true;
+            this.qualifications.Items.AddRange(new object[] {
             "styczeń",
             "czerwiec"});
-            this.comboBox2.Location = new System.Drawing.Point(44, 514);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(91, 21);
-            this.comboBox2.TabIndex = 8;
+            this.qualifications.Location = new System.Drawing.Point(44, 514);
+            this.qualifications.Name = "qualifications";
+            this.qualifications.Size = new System.Drawing.Size(91, 21);
+            this.qualifications.TabIndex = 8;
             // 
             // label13
             // 
@@ -360,51 +365,51 @@ namespace Deklaracja
             this.label13.Size = new System.Drawing.Size(0, 13);
             this.label13.TabIndex = 9;
             // 
-            // radioButton3
+            // first
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton3.Location = new System.Drawing.Point(44, 554);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(112, 17);
-            this.radioButton3.TabIndex = 10;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "po raz pierwszy";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.first.AutoSize = true;
+            this.first.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.first.Location = new System.Drawing.Point(11, 13);
+            this.first.Name = "first";
+            this.first.Size = new System.Drawing.Size(112, 17);
+            this.first.TabIndex = 10;
+            this.first.TabStop = true;
+            this.first.Text = "po raz pierwszy";
+            this.first.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // second
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton4.Location = new System.Drawing.Point(170, 555);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(162, 17);
-            this.radioButton4.TabIndex = 11;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "po raz kolejny do części";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.second.AutoSize = true;
+            this.second.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.second.Location = new System.Drawing.Point(137, 13);
+            this.second.Name = "second";
+            this.second.Size = new System.Drawing.Size(162, 17);
+            this.second.TabIndex = 11;
+            this.second.TabStop = true;
+            this.second.Text = "po raz kolejny do części";
+            this.second.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // written
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox1.Location = new System.Drawing.Point(380, 555);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(79, 17);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "pisemnej,";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.written.AutoSize = true;
+            this.written.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.written.Location = new System.Drawing.Point(380, 555);
+            this.written.Name = "written";
+            this.written.Size = new System.Drawing.Size(79, 17);
+            this.written.TabIndex = 12;
+            this.written.Text = "pisemnej,";
+            this.written.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // practice
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox2.Location = new System.Drawing.Point(465, 555);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(91, 17);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.Text = "praktycznej";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.practice.AutoSize = true;
+            this.practice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.practice.Location = new System.Drawing.Point(465, 555);
+            this.practice.Name = "practice";
+            this.practice.Size = new System.Drawing.Size(91, 17);
+            this.practice.TabIndex = 13;
+            this.practice.Text = "praktycznej";
+            this.practice.UseVisualStyleBackColor = true;
             // 
             // richTextBox1
             // 
@@ -414,51 +419,69 @@ namespace Deklaracja
             this.richTextBox1.TabIndex = 14;
             this.richTextBox1.Text = "";
             // 
-            // button1
+            // confirm
             // 
-            this.button1.Location = new System.Drawing.Point(386, 596);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Zatwierdź";
-            this.button1.UseVisualStyleBackColor = true;
+            this.confirm.Location = new System.Drawing.Point(386, 596);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(175, 23);
+            this.confirm.TabIndex = 15;
+            this.confirm.Text = "Zatwierdź";
+            this.confirm.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // clear
             // 
-            this.button2.Location = new System.Drawing.Point(618, 596);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Wyczyść";
-            this.button2.UseVisualStyleBackColor = true;
+            this.clear.Location = new System.Drawing.Point(618, 596);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(200, 23);
+            this.clear.TabIndex = 16;
+            this.clear.Text = "Wyczyść";
+            this.clear.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // save
             // 
-            this.button3.Location = new System.Drawing.Point(836, 596);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(189, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Zapisz";
-            this.button3.UseVisualStyleBackColor = true;
+            this.save.Location = new System.Drawing.Point(836, 596);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(189, 23);
+            this.save.TabIndex = 17;
+            this.save.Text = "Zapisz";
+            this.save.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.computerspecialist);
+            this.groupBox3.Controls.Add(this.programmer);
+            this.groupBox3.Location = new System.Drawing.Point(73, 459);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(413, 49);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.first);
+            this.groupBox4.Controls.Add(this.second);
+            this.groupBox4.Location = new System.Drawing.Point(33, 541);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(308, 41);
+            this.groupBox4.TabIndex = 19;
+            this.groupBox4.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 631);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.save);
+            this.Controls.Add(this.clear);
+            this.Controls.Add(this.confirm);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.practice);
+            this.Controls.Add(this.written);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.qualifications);
+            this.Controls.Add(this.listofterms);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox2);
@@ -471,6 +494,10 @@ namespace Deklaracja
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,22 +507,22 @@ namespace Deklaracja
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox pesel;
+        private System.Windows.Forms.TextBox placeofbrith;
+        private System.Windows.Forms.TextBox dateofbirth;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox lastname;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox phonenumber;
+        private System.Windows.Forms.TextBox postoffice;
+        private System.Windows.Forms.TextBox code;
+        private System.Windows.Forms.TextBox address;
+        private System.Windows.Forms.TextBox town;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -503,19 +530,21 @@ namespace Deklaracja
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox listofterms;
+        private System.Windows.Forms.RadioButton computerspecialist;
+        private System.Windows.Forms.RadioButton programmer;
+        private System.Windows.Forms.ComboBox qualifications;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.RadioButton first;
+        private System.Windows.Forms.RadioButton second;
+        private System.Windows.Forms.CheckBox written;
+        private System.Windows.Forms.CheckBox practice;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button confirm;
+        private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.Button save;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 
