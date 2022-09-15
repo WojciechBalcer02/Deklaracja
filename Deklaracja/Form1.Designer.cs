@@ -143,6 +143,7 @@ namespace Deklaracja
             this.lastname.Name = "lastname";
             this.lastname.Size = new System.Drawing.Size(305, 20);
             this.lastname.TabIndex = 4;
+            this.lastname.TextChanged += new System.EventHandler(this.lastname_TextChanged);
             // 
             // label5
             // 
@@ -419,6 +420,7 @@ namespace Deklaracja
             this.viewtext.Size = new System.Drawing.Size(407, 548);
             this.viewtext.TabIndex = 14;
             this.viewtext.Text = "";
+            this.viewtext.TextChanged += new System.EventHandler(this.viewtext_TextChanged);
             // 
             // confirm
             // 
@@ -428,6 +430,7 @@ namespace Deklaracja
             this.confirm.TabIndex = 15;
             this.confirm.Text = "Zatwierdź";
             this.confirm.UseVisualStyleBackColor = true;
+            this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
             // clear
             // 
