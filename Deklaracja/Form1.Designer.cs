@@ -378,6 +378,7 @@ namespace Deklaracja
             this.first.TabStop = true;
             this.first.Text = "po raz pierwszy";
             this.first.UseVisualStyleBackColor = true;
+            this.first.CheckedChanged += new System.EventHandler(this.first_CheckedChanged);
             // 
             // second
             // 
@@ -390,6 +391,7 @@ namespace Deklaracja
             this.second.TabStop = true;
             this.second.Text = "po raz kolejny do części";
             this.second.UseVisualStyleBackColor = true;
+            this.second.CheckedChanged += new System.EventHandler(this.second_CheckedChanged);
             // 
             // written
             // 

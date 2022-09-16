@@ -17,6 +17,7 @@ namespace Deklaracja
         String pierwszyKolejny;
         String teoriaPraktyka;
         String kwalifikacja;
+        String symbol;
         public Form1()
         {
             InitializeComponent();
@@ -50,53 +51,58 @@ namespace Deklaracja
         {
             if (programmer.Checked) {
                 technicy = "Technik programista";
+                symbol = "351406";
             }
             else if (computerspecialist.Checked){
                 technicy = "Technik informatyk";
+                symbol = "351203";
             }
             if (first.Checked)
             {
                 pierwszyKolejny = "po raz pierwszy";
-                practice.Enabled = false;
-                written.Enabled = false;
+                
+                teoriaPraktyka = " ";
             }
             else if (second.Checked)
             {
                 pierwszyKolejny = "po raz kolejny";
-                practice.Enabled = true;
-                written.Enabled = true;
+
+                
                 if ((practice.Checked) && (written.Checked))
                 {
-                    teoriaPraktyka = "praktycznej i teoretycznej";
+                    teoriaPraktyka = "do części praktycznej i teoretycznej";
                 }
                 else if (practice.Checked)
                 {
-                    teoriaPraktyka = "praktycznej";
+                    teoriaPraktyka = "do części praktycznej";
                 }
                 else if (written.Checked)
                 {
-                    teoriaPraktyka = "teoretycznej";
+                    teoriaPraktyka = "do części teoretycznej";
                 }
             }
             if (qualifications.SelectedItem.Equals("INF.02"))
             {
                 kwalifikacja = "Administracja i eksploatacja systemów komputerowych, urządzeń\r\nperyferyjnych i lokalnych sieci komputerowych";
             }
-            else if (qualifications.SelectedItem.Equals("INF.03")) {
+            else if (qualifications.SelectedItem.Equals("INF.03"))
+            {
                 kwalifikacja = "Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz\r\nbazami danych";
             }
             else if (qualifications.SelectedItem.Equals("INF.04"))
             {
                 kwalifikacja = "Projektowanie, programowanie i testowanie aplikacji";
             }
-                viewtext.Text = "Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie" +
-            " przeprowadzanego w terminie " + listofterms.SelectedItem + "\n\n Dane osobowe ucznia \n Nazwisko: \t\t" +
-            lastname.Text + "\n Imię (imona): \t \t" + name.Text + "\n Data i miejsce urodzenia: \t" + dateofbirth.Text + " " + placeofbrith.Text +
-            "\n Pesel: \t\t\t" + pesel.Text + "\n\n Adres korespondencyjny\n miejscowość \t\t" + town.Text + "\n ulica i numer domu: \t" + address.Text +
-            "\n kod pocztowy i poczta: \t" + code.Text + "\t " + postoffice.Text + "\n nr telefonu z kierunkowym: \t" + phonenumber.Text +
-            "\n email: \t" + email.Text + "\n Deklaruje przystąpienie do egzaminu " + pierwszyKolejny + " do części " + teoriaPraktyka +
-            "\n\n Oznaczenie kwalifikacji zgodne z podstawą programową: " + qualifications.SelectedItem + "\n"+
-            "Nazwa kwalifikacji: "
+
+
+            viewtext.Text = "Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie" +
+        " przeprowadzanego w terminie " + listofterms.SelectedItem + "\n\n Dane osobowe ucznia \n Nazwisko: \t\t" +
+        lastname.Text + "\n Imię (imona): \t \t" + name.Text + "\n Data i miejsce urodzenia: \t" + dateofbirth.Text + " " + placeofbrith.Text +
+        "\n Pesel: \t\t\t" + pesel.Text + "\n\n Adres korespondencyjny\n miejscowość \t\t" + town.Text + "\n ulica i numer domu: \t" + address.Text +
+        "\n kod pocztowy i poczta: \t" + code.Text + "\t " + postoffice.Text + "\n nr telefonu z kierunkowym: \t" + phonenumber.Text +
+        "\n email: \t" + email.Text + "\n Deklaruje przystąpienie do egzaminu " + pierwszyKolejny + teoriaPraktyka +
+        "\n\n Oznaczenie kwalifikacji zgodne z podstawą programową: " + qualifications.SelectedItem + "\n" +
+        "Nazwa kwalifikacji: " + kwalifikacja + "\n\n Symbol cyfrowy zawodu: " + symbol + "\n Nazwa zawodu: " + technicy;
             ;
 
 
@@ -110,6 +116,18 @@ namespace Deklaracja
         private void viewtext_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void first_CheckedChanged(object sender, EventArgs e)
+        {
+            practice.Enabled = false;
+            written.Enabled = false;
+        }
+
+        private void second_CheckedChanged(object sender, EventArgs e)
+        {
+            practice.Enabled = true;
+            written.Enabled = true;
         }
     }
 }
