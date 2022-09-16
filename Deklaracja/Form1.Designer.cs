@@ -442,6 +442,7 @@ namespace Deklaracja
             this.clear.TabIndex = 16;
             this.clear.Text = "Wyczyść";
             this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
             // save
             // 

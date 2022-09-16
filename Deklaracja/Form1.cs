@@ -103,8 +103,6 @@ namespace Deklaracja
         "\n email: \t" + email.Text + "\n Deklaruje przystąpienie do egzaminu " + pierwszyKolejny + teoriaPraktyka +
         "\n\n Oznaczenie kwalifikacji zgodne z podstawą programową: " + qualifications.SelectedItem + "\n" +
         "Nazwa kwalifikacji: " + kwalifikacja + "\n\n Symbol cyfrowy zawodu: " + symbol + "\n Nazwa zawodu: " + technicy;
-            ;
-
 
         }
 
@@ -128,6 +126,20 @@ namespace Deklaracja
         {
             practice.Enabled = true;
             written.Enabled = true;
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            viewtext.Text = " ";
+            lastname.Clear();
+            name.Clear();
+            dateofbirth.Clear();
+            placeofbrith.Clear();
+            town.Clear();
+            code.Clear();
+            postoffice.Clear();
+            phonenumber.Clear();
+            email.Clear();
         }
     }
 }
