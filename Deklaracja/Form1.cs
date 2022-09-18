@@ -22,7 +22,7 @@ namespace Deklaracja
         public Form1()
         {
             InitializeComponent();
-
+            changetext.Text = kwalifikacja;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -157,6 +157,23 @@ namespace Deklaracja
                     sw.WriteLine(viewtext.Text);
                 }
             }
+        }
+
+        private void qualifications_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (qualifications.SelectedItem.Equals("INF.02"))
+            {
+                kwalifikacja = "Administracja i eksploatacja systemów komputerowych, urządzeń\r\nperyferyjnych i lokalnych sieci komputerowych";
+            }
+            else if (qualifications.SelectedItem.Equals("INF.03"))
+            {
+                kwalifikacja = "Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz\r\nbazami danych";
+            }
+            else if (qualifications.SelectedItem.Equals("INF.04"))
+            {
+                kwalifikacja = "Projektowanie, programowanie i testowanie aplikacji";
+            }
+            changetext.Text = kwalifikacja;
         }
     }
 }

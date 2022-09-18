@@ -357,6 +357,7 @@ namespace Deklaracja
             this.qualifications.Name = "qualifications";
             this.qualifications.Size = new System.Drawing.Size(91, 21);
             this.qualifications.TabIndex = 8;
+            this.qualifications.SelectedIndexChanged += new System.EventHandler(this.qualifications_SelectedIndexChanged);
             // 
             // changetext
             // 
