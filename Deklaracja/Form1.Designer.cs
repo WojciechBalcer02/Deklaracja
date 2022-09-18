@@ -452,11 +452,13 @@ namespace Deklaracja
             this.save.TabIndex = 17;
             this.save.Text = "Zapisz";
             this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.computerspecialist);
             this.groupBox3.Controls.Add(this.programmer);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox3.Location = new System.Drawing.Point(73, 459);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(413, 49);

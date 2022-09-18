@@ -21,6 +21,7 @@ namespace Deklaracja
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -98,9 +99,9 @@ namespace Deklaracja
             viewtext.Text = "Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie" +
         " przeprowadzanego w terminie " + listofterms.SelectedItem + "\n\n Dane osobowe ucznia \n Nazwisko: \t\t" +
         lastname.Text + "\n Imię (imona): \t \t" + name.Text + "\n Data i miejsce urodzenia: \t" + dateofbirth.Text + " " + placeofbrith.Text +
-        "\n Pesel: \t\t\t" + pesel.Text + "\n\n Adres korespondencyjny\n miejscowość \t\t" + town.Text + "\n ulica i numer domu: \t" + address.Text +
+        "\n Pesel: \t\t\t" + pesel.Text + "\n\n Adres korespondencyjny\n miejscowość: \t\t" + town.Text + "\n ulica i numer domu: \t" + address.Text +
         "\n kod pocztowy i poczta: \t" + code.Text + "\t " + postoffice.Text + "\n nr telefonu z kierunkowym: \t" + phonenumber.Text +
-        "\n email: \t" + email.Text + "\n Deklaruje przystąpienie do egzaminu " + pierwszyKolejny + teoriaPraktyka +
+        "\n email: \t\t\t\t" + email.Text + "\n Deklaruje przystąpienie do egzaminu " + pierwszyKolejny + teoriaPraktyka +
         "\n\n Oznaczenie kwalifikacji zgodne z podstawą programową: " + qualifications.SelectedItem + "\n" +
         "Nazwa kwalifikacji: " + kwalifikacja + "\n\n Symbol cyfrowy zawodu: " + symbol + "\n Nazwa zawodu: " + technicy;
 
@@ -140,6 +141,13 @@ namespace Deklaracja
             postoffice.Clear();
             phonenumber.Clear();
             email.Clear();
+            pesel.Clear();
+            address.Clear();
+        }
+
+        private void save_Click(object sender, EventArgs e)
+        {
+            viewtext.SaveFile(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal) + @"\Testdoc.txt", RichTextBoxStreamType.RichNoOleObjs);
         }
     }
 }
