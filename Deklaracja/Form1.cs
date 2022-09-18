@@ -20,7 +20,19 @@ namespace Deklaracja
         String teoriaPraktyka;
         String kwalifikacja;
         String symbol;
-        Boolean dzialaj = true;
+
+        Boolean sprawdz1 = true;
+        Boolean sprawdz2 = true;
+        Boolean sprawdz3 = true;
+        Boolean sprawdz4 = true;
+        Boolean sprawdz5 = true;
+        Boolean sprawdz6 = true;
+        Boolean sprawdz7 = true;
+        Boolean sprawdz8 = true;
+        Boolean sprawdz9 = true;
+        Boolean sprawdz10 = true;
+        Boolean sprawdz11 = true;
+
         public Form1()
         {
             InitializeComponent();
@@ -59,13 +71,13 @@ namespace Deklaracja
 
             if (rn.IsMatch(lastname.Text))
             {
-                dzialaj = true;
+                sprawdz1 = true;
                 lastname.BackColor = Color.White;
             }
             else
             {
                 lastname.BackColor = Color.Red;
-                dzialaj = false;
+                sprawdz1 = false;
             }
 
 
@@ -74,13 +86,13 @@ namespace Deklaracja
 
             if (ri.IsMatch(name.Text))
             {
-                dzialaj = true;
+                sprawdz2 = true;
                 name.BackColor = Color.White;
             }
             else
             {
                 name.BackColor = Color.Red;
-                dzialaj = false;
+                sprawdz2 = false;
             }
 
             String dataUro = @"^[0-3][0-9]\.[0-1][0-2]\.[1-2][0-9][0-9][0-9]$";
@@ -88,13 +100,13 @@ namespace Deklaracja
 
             if (rdu.IsMatch(dateofbirth.Text))
             {
-                dzialaj = true;
+                sprawdz3 = true;
                 dateofbirth.BackColor = Color.White;
             }
             else
             {
                 dateofbirth.BackColor = Color.Red;
-                dzialaj = false;
+                sprawdz3 = false;
             }
 
             String miejsceUro = @"^[A-Z]{1,20}$";
@@ -102,13 +114,13 @@ namespace Deklaracja
 
             if (rmu.IsMatch(placeofbrith.Text))
             {
-                dzialaj = true;
+                sprawdz4 = true;
                 placeofbrith.BackColor = Color.White;
             }
             else
             {
                 placeofbrith.BackColor = Color.Red;
-                dzialaj = false;
+                sprawdz4 = false;
             }
 
             String peselS = @"^[0-9]{11}$";
@@ -116,13 +128,41 @@ namespace Deklaracja
 
             if (rp.IsMatch(pesel.Text))
             {
-                dzialaj = true;
+                sprawdz5 = true;
                 pesel.BackColor = Color.White;
             }
             else
             {
                 pesel.BackColor = Color.Red;
-                dzialaj = false;
+                sprawdz5 = false;
+            }
+
+            String miejscowosc = @"^[A-Z]{1,20}$";
+            Regex rm = new Regex(miejscowosc);
+
+            if (rm.IsMatch(town.Text))
+            {
+                sprawdz6 = true;
+                town.BackColor = Color.White;
+            }
+            else
+            {
+                town.BackColor = Color.Red;
+                sprawdz6 = false;
+            }
+
+            String adres = @"^[A-Z]{1,30}\s\w{0,10}\/{0,1}\w{0,10}$";
+            Regex ra = new Regex(adres);
+
+            if (ra.IsMatch(address.Text))
+            {
+                sprawdz7 = true;
+                address.BackColor = Color.White;
+            }
+            else
+            {
+                address.BackColor = Color.Red;
+                sprawdz7 = false;
             }
 
             String kod = @"^[0-9]{2}-[0-9]{3}$";
@@ -130,20 +170,58 @@ namespace Deklaracja
 
             if (rk.IsMatch(code.Text))
             {
-                dzialaj = true;
+                sprawdz8 = true;
                 code.BackColor = Color.White;
             }
             else
             {
                 code.BackColor = Color.Red;
-                dzialaj = false;
+                sprawdz8 = false;
+            }
+
+            String poczta = @"^\w{1,30}$";
+            Regex rpo = new Regex(poczta);
+
+            if (rpo.IsMatch(postoffice.Text))
+            {
+                sprawdz9 = true;
+                postoffice.BackColor = Color.White;
+            }
+            else
+            {
+                postoffice.BackColor = Color.Red;
+                sprawdz9 = false;
+            }
+
+            String telefon = @"^\+[1-9][0-9]\s[1-9][0-9]{8}$";
+            Regex rt = new Regex(telefon);
+
+            if (rt.IsMatch(phonenumber.Text))
+            {
+                sprawdz10 = true;
+                phonenumber.BackColor = Color.White;
+            }
+            else
+            {
+                phonenumber.BackColor = Color.Red;
+                sprawdz10 = false;
+            }
+            String mail = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+            Regex rmail = new Regex(mail);
+
+            if (rmail.IsMatch(email.Text))
+            {
+                sprawdz11 = true;
+                email.BackColor = Color.White;
+            }
+            else
+            {
+                email.BackColor = Color.Red;
+                sprawdz11 = false;
             }
 
 
-            
-
-
-            if (dzialaj == true)
+            if ((sprawdz1 == true) && (sprawdz2 == true) && (sprawdz3 == true) && (sprawdz4 == true) && (sprawdz5 == true) && (sprawdz6 == true) && (sprawdz7 == true) && (sprawdz8 == true) && (sprawdz9 == true) && (sprawdz10 == true) && (sprawdz11 == true))
             {
                 
 
