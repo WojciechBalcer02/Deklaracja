@@ -193,10 +193,12 @@ namespace Deklaracja
                 sprawdz9 = false;
             }
 
-            String telefon = @"^\+[1-9][0-9]\s[1-9][0-9]{8}$";
-            Regex rt = new Regex(telefon);
+            String telefonk = @"^\+[1-9][0-9]\s[1-9][0-9]{8}$";
+            String telefond = @"^\+[1-9][0-9]\s58\s[0-9]{7}$";
+            Regex rtk = new Regex(telefonk);
+            Regex rtd = new Regex(telefond);
 
-            if (rt.IsMatch(phonenumber.Text))
+            if ((rtk.IsMatch(phonenumber.Text))||(rtd.IsMatch(phonenumber.Text)))
             {
                 sprawdz10 = true;
                 phonenumber.BackColor = Color.White;
