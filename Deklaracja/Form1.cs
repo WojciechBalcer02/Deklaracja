@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -147,7 +148,15 @@ namespace Deklaracja
 
         private void save_Click(object sender, EventArgs e)
         {
-            viewtext.SaveFile(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal) + @"\Testdoc.txt", RichTextBoxStreamType.RichNoOleObjs);
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (Stream s = File.Open(saveFileDialog.FileName, FileMode.CreateNew))
+                using (StreamWriter sw = new StreamWriter(s))
+                {
+                    sw.WriteLine(viewtext.Text);
+                }
+            }
         }
     }
 }
