@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Text.RegularExpressions;
 
 namespace Deklaracja
 {
@@ -19,6 +20,7 @@ namespace Deklaracja
         String teoriaPraktyka;
         String kwalifikacja;
         String symbol;
+        Boolean dzialaj = true;
         public Form1()
         {
             InitializeComponent();
@@ -51,60 +53,165 @@ namespace Deklaracja
 
         private void confirm_Click(object sender, EventArgs e)
         {
-            if (programmer.Checked) {
-                technicy = "Technik programista";
-                symbol = "351406";
-            }
-            else if (computerspecialist.Checked){
-                technicy = "Technik informatyk";
-                symbol = "351203";
-            }
-            if (first.Checked)
+            
+            String nazwisko = @"^[A-Z]{1,20}$";
+            Regex rn = new Regex(nazwisko);
+
+            if (rn.IsMatch(lastname.Text))
             {
-                pierwszyKolejny = "po raz pierwszy";
+                dzialaj = true;
+                lastname.BackColor = Color.White;
+            }
+            else
+            {
+                lastname.BackColor = Color.Red;
+                dzialaj = false;
+            }
+
+
+            String imie = @"^[A-Z]{1,20}$";
+            Regex ri = new Regex(imie);
+
+            if (ri.IsMatch(name.Text))
+            {
+                dzialaj = true;
+                name.BackColor = Color.White;
+            }
+            else
+            {
+                name.BackColor = Color.Red;
+                dzialaj = false;
+            }
+
+            String dataUro = @"^[0-3][0-9]\.[0-1][0-2]\.[1-2][0-9][0-9][0-9]$";
+            Regex rdu = new Regex(dataUro);
+
+            if (rdu.IsMatch(dateofbirth.Text))
+            {
+                dzialaj = true;
+                dateofbirth.BackColor = Color.White;
+            }
+            else
+            {
+                dateofbirth.BackColor = Color.Red;
+                dzialaj = false;
+            }
+
+            String miejsceUro = @"^[A-Z]{1,20}$";
+            Regex rmu = new Regex(miejsceUro);
+
+            if (rmu.IsMatch(placeofbrith.Text))
+            {
+                dzialaj = true;
+                placeofbrith.BackColor = Color.White;
+            }
+            else
+            {
+                placeofbrith.BackColor = Color.Red;
+                dzialaj = false;
+            }
+
+            String peselS = @"^[0-9]{11}$";
+            Regex rp = new Regex(peselS);
+
+            if (rp.IsMatch(pesel.Text))
+            {
+                dzialaj = true;
+                pesel.BackColor = Color.White;
+            }
+            else
+            {
+                pesel.BackColor = Color.Red;
+                dzialaj = false;
+            }
+
+            String kod = @"^[0-9]{2}-[0-9]{3}$";
+            Regex rk = new Regex(kod);
+
+            if (rk.IsMatch(code.Text))
+            {
+                dzialaj = true;
+                code.BackColor = Color.White;
+            }
+            else
+            {
+                code.BackColor = Color.Red;
+                dzialaj = false;
+            }
+
+
+            
+
+
+            if (dzialaj == true)
+            {
                 
-                teoriaPraktyka = " ";
-            }
-            else if (second.Checked)
-            {
-                pierwszyKolejny = "po raz kolejny";
 
-                
-                if ((practice.Checked) && (written.Checked))
+                if (programmer.Checked)
                 {
-                    teoriaPraktyka = "do części praktycznej i teoretycznej";
+                    technicy = "Technik programista";
+                    symbol = "351406";
                 }
-                else if (practice.Checked)
+                else if (computerspecialist.Checked)
                 {
-                    teoriaPraktyka = "do części praktycznej";
+                    technicy = "Technik informatyk";
+                    symbol = "351203";
                 }
-                else if (written.Checked)
+                if (first.Checked)
                 {
-                    teoriaPraktyka = "do części teoretycznej";
+                    pierwszyKolejny = "po raz pierwszy";
+
+                    teoriaPraktyka = " ";
                 }
-            }
-            if (qualifications.SelectedItem.Equals("INF.02"))
-            {
-                kwalifikacja = "Administracja i eksploatacja systemów komputerowych, urządzeń\r\nperyferyjnych i lokalnych sieci komputerowych";
-            }
-            else if (qualifications.SelectedItem.Equals("INF.03"))
-            {
-                kwalifikacja = "Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz\r\nbazami danych";
-            }
-            else if (qualifications.SelectedItem.Equals("INF.04"))
-            {
-                kwalifikacja = "Projektowanie, programowanie i testowanie aplikacji";
-            }
+                else if (second.Checked)
+                {
+                    pierwszyKolejny = "po raz kolejny ";
 
 
-            viewtext.Text = "Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie" +
-        " przeprowadzanego w terminie " + listofterms.SelectedItem + "\n\n Dane osobowe ucznia \n Nazwisko: \t\t" +
-        lastname.Text + "\n Imię (imona): \t \t" + name.Text + "\n Data i miejsce urodzenia: \t" + dateofbirth.Text + " " + placeofbrith.Text +
-        "\n Pesel: \t\t\t" + pesel.Text + "\n\n Adres korespondencyjny\n miejscowość: \t\t" + town.Text + "\n ulica i numer domu: \t" + address.Text +
-        "\n kod pocztowy i poczta: \t" + code.Text + "\t " + postoffice.Text + "\n nr telefonu z kierunkowym: \t" + phonenumber.Text +
-        "\n email: \t\t\t\t" + email.Text + "\n Deklaruje przystąpienie do egzaminu " + pierwszyKolejny + teoriaPraktyka +
-        "\n\n Oznaczenie kwalifikacji zgodne z podstawą programową: " + qualifications.SelectedItem + "\n" +
-        "Nazwa kwalifikacji: " + kwalifikacja + "\n\n Symbol cyfrowy zawodu: " + symbol + "\n Nazwa zawodu: " + technicy;
+                    if ((practice.Checked) && (written.Checked))
+                    {
+                        teoriaPraktyka = "do części praktycznej i teoretycznej";
+                    }
+                    else if (practice.Checked)
+                    {
+                        teoriaPraktyka = "do części praktycznej";
+                    }
+                    else if (written.Checked)
+                    {
+                        teoriaPraktyka = "do części teoretycznej";
+                    }
+                }
+                if (qualifications.SelectedItem.Equals("INF.02"))
+                {
+                    kwalifikacja = "Administracja i eksploatacja systemów komputerowych, urządzeń\r\nperyferyjnych i lokalnych sieci komputerowych";
+                }
+                else if (qualifications.SelectedItem.Equals("INF.03"))
+                {
+                    kwalifikacja = "Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz\r\nbazami danych";
+                }
+                else if (qualifications.SelectedItem.Equals("INF.04"))
+                {
+                    kwalifikacja = "Projektowanie, programowanie i testowanie aplikacji";
+                }
+
+
+                viewtext.Text = "Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie" +
+            " przeprowadzanego w terminie " + listofterms.SelectedItem + "\n\n Dane osobowe ucznia \n Nazwisko: \t\t" +
+            lastname.Text + "\n Imię (imona): \t \t" + name.Text + "\n Data i miejsce urodzenia: \t" + dateofbirth.Text + " " + placeofbrith.Text +
+            "\n Pesel: \t\t\t" + pesel.Text + "\n\n Adres korespondencyjny\n miejscowość: \t\t" + town.Text + "\n ulica i numer domu: \t" + address.Text +
+            "\n kod pocztowy i poczta: \t" + code.Text + "\t " + postoffice.Text + "\n nr telefonu z kierunkowym: \t" + phonenumber.Text +
+            "\n email: \t\t\t\t" + email.Text + "\n Deklaruje przystąpienie do egzaminu " + pierwszyKolejny + teoriaPraktyka +
+            "\n\n Oznaczenie kwalifikacji zgodne z podstawą programową: " + qualifications.SelectedItem + "\n" +
+            "Nazwa kwalifikacji: " + kwalifikacja + "\n\n Symbol cyfrowy zawodu: " + symbol + "\n Nazwa zawodu: " + technicy;
+
+            }
+            else
+            {
+                MessageBox.Show("Popraw błędy");
+            }
+
+
+
 
         }
 
